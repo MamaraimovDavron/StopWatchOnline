@@ -1,38 +1,101 @@
-.App {
-  text-align: center;
+body{
+  background-color: #1F1F1F;
+}
+.container{
+  border: 1px solid grey;
+  height: 600px;
+  margin-top: 100px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container-md{
+  border-bottom: 5px solid white;
+  height: 100px;
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.container-md h1{
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.timer-container{
+  width: 400px;
+  float: right;
+  height: 100%;
+  position: relative;
+  top: -55px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.timer-container button{
+  color: white;
+  display: inline-block;
+  font-size: 24px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #1F1F1F;
+}
+
+.timer-container button:hover{
+  color: grey;
+}
+
+.watch-container{
+  border: 1px solid grey;
+  border-radius: 10px;
+  width: 100%;
+  height: 300px;
+  display: flex;
+}
+
+.watch-container .box--container{
+  width: 24%;
+  border: 1px solid grey;
+  height: 200px;
+  margin-left: 100px;
+  margin-top: 50px;
+  border-radius: 10px;
+}
+
+.watch-container .box--container:hover{
+  box-shadow: 0px 0px 5px grey;
+}
+
+.box--container p{
+  color: white;
+  font-size: 80px;
+  text-align: center;
+  margin-top: 30px;
+  font-family: 'Century Gothic',monospace;
+}
+
+.footer{
+  border: 1px solid grey;
+  height: 120px;
+  margin-top: 10px;
+  border-radius: 10px;
+  color: white;
+  overflow-y: auto;
+}
+
+.footer::-webkit-scrollbar{
+  width: 5px;
+}
+
+.footer::-webkit-scrollbar-thumb{
+  background-color: white;
+  border-radius: 5px;
+}
+
+@media (max-width: 825px){
+  .container{
+      flex-direction: column;
+      padding-top: 40px;
+      padding-bottom: 40px;
   }
-  to {
-    transform: rotate(360deg);
+  .container-md{
+      margin-top: 20px;
+  }
+
+  .timer-container{
+      margin-top: 10px;
   }
 }
